@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="cars.xsl"?>
-<Cars>
+<automobile>
+    <type>
    <car>
        <model>Corolla XLT 2.0 </model>
 	   <year>2019</year>
@@ -26,4 +26,5 @@
  		<year>2017</year>
         <price>15.000</price>
    </car>
-</Cars>
+    </type>
+</automobile>

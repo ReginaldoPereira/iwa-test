@@ -1,33 +1,43 @@
 <?xml version="1.0"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-<xsl:output method="html" encoding="UTF-8"/>
-<xsl:template match="/">
-<html>
-<head><title>Cars</title>
-</head>
-<body>
-<table width="100%" border="1">
-  <THEAD>
-           <TR>
-                <TD width="35%"><B>Model</B></TD>
-                <TD width="15%"><B>Year</B></TD>
-                <TD width="15%"><B>Price</B></TD>
-         
-          </TR>
-   </THEAD> 
-  <TBODY>
-             <xsl:for-each select="cars/car">
-             <TR> 
-                  <TD width="35%"><xsl:value-of select="model" /></TD>   
-                  <TD width="15%"><xsl:value-of select="year" /></TD> 
-                  <TD width="10%"><xsl:value-of select="price" /></TD>
-                  
-            </TR>
-            </xsl:for-each>
-  </TBODY>
-</table>
-</body>
-</html>
-</xsl:template>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    <xsl:template match="/">
+                <table id="automobile" class="indent">
+                    <thead>
+                        <tr>
+                            <th colspan="4">Cars Concession</th>
+                        </tr>
+                        <tr>
+                            <th>Select</th>
+                            <th>Model</th>
+                            <th>Year</th>
+                             <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <xsl:for-each select="/automobile/type">
+                            <tr>
+                                <td colspan="4">
+                                    <xsl:value-of select="@name" />
+                                </td>
+                            </tr>
+                            <xsl:for-each select="car">
+                            <tr id="{position()}">
+                                <td align="center">
+                                    <input name="car0" type="checkbox" />
+                                </td>
+                                <td>
+                                    <xsl:value-of select="model" />
+                                </td>
+                                <td>
+                                    <xsl:value-of select="year" />
+                                </td>
+                                <td>
+                                    <xsl:value-of select="price" />
+                                </td>
+                            </tr>
+                            </xsl:for-each>
+                        </xsl:for-each>
+                    </tbody>
+                </table><br/>
+    </xsl:template>
 </xsl:stylesheet>
-
