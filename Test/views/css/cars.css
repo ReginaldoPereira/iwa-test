@@ -3,29 +3,29 @@ XML {
 }
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: #FFFFFF;
+	background-color: black;
 	margin: 5px;
 	text-align: left;
-	color: #523819;
+	color: white;
 }
 h2 {
-	font-size: 140%;
+	font-size: 100%;
 	color: #0D3427;
 	margin-top: 10px;
 }
 p {
-	font-size: 80%;
-	color: #523819;
+	font-size: 50%;
+	color: yellow;
 }
 table {
-	background-color: #DACFE5;
-	border-color: #000000;
+	background-color: rgb(202, 199, 206);
+	border-color: whitesmoke;
 	border-width: thin;
 	border-collapse: collapse;
 	width: 75%;
 }
 th {
-	border-color: #000000;
+	border-color: red;
 	font-size: 120%;
 	color: #0D3427;
 }

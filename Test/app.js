@@ -4,14 +4,16 @@ var http = require('http'), //This module provides the HTTP server functionaliti
     fs = require('fs'), //This module allows to work witht the file system: read and write files back
     xmlParse = require('xslt-processor').xmlParse, //This module allows us to work with XML files
     xsltProcess = require('xslt-processor').xsltProcess, //The same module allows us to utilise XSL Transformations
-    xml2js = require('xml2js'); //This module does XML to JSON conversion and also allows us to get from JSON back to XML
+    xml2js = require('xml2js'), //This module does XML to JSON conversion and also allows us to get from JSON back to XML
+    autosanitizer = require('express-autosanitizer');
 
 var router = express(); //The set our routing to be handled by Express
 var server = http.createServer(router); //This is where our server gets created
 
 router.use(express.static(path.resolve(__dirname, 'views'))); //We define the views folder as the one where all static content will be served
 router.use(express.urlencoded({extended: true})); //We allow the data sent from the client to be coming in as part of the URL in GET and POST requests
-router.use(express.json()); //We include support for JSON that is coming from the client
+router.use(express.json()), //We include support for JSON that is coming from the client
+router.use(autosanitizer.allUnsafe);
 
 // Function to read in XML file and convert it to JSON
 function xmlFileToJs(filename, cb) {
