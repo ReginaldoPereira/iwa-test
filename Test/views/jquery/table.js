@@ -1,4 +1,4 @@
-function draw_table()
+function draw_table() //Those codes are taken and recoded from gitHub. Codes are of the properties of Mikhail Timofeev CCT Web Professor.-->
 {
 	$("#results").empty();
 	$.getJSONuncached = function (url)
@@ -53,3 +53,6 @@ $(document).ready(function ()
 {
 	draw_table();
 });
+
+
+//Those codes are taken and recoded from gitHub. Codes are of the properties of Mikhail Timofeev CCT Web Professor.-->

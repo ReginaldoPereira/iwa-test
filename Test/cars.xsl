@@ -4,7 +4,7 @@
                 <table id="automobile" class="indent">
                     <thead>
                         <tr>
-                            <th colspan="4">Cars Concession</th>
+                            <th colspan="4">Concession Cars</th>
                         </tr>
                         <tr>
                             <th>Select</th>

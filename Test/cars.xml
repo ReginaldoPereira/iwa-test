@@ -7,11 +7,6 @@
       <price>23.000</price>
     </car>
     <car>
-      <model>Honda Civic </model>
-      <year>2018</year>
-      <price>19.000</price>
-    </car>
-    <car>
       <model>Corolla XS 1.4 </model>
       <year>2015</year>
       <price>10.000</price>
@@ -25,6 +20,11 @@
       <model>corolla xst</model>
       <year>2018</year>
       <price>12.000</price>
+    </car>
+    <car>
+      <model>VW Polo</model>
+      <year>2017</year>
+      <price>7.000</price>
     </car>
   </type>
 </automobile>
